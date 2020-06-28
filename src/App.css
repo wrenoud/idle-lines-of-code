@@ -6,6 +6,14 @@
   color: #009900;
 }
 
+#App a{
+  color: #00cc00;
+}
+
+#App a:visited{
+  color: #009900;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

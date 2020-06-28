@@ -17,6 +17,7 @@
 
 .Console .Prompt .Cursor
 {
+    background: transparent;
     width: 10px;
     padding: 0px;
     margin: 0px;
@@ -25,5 +26,6 @@
 
 .Console .Prompt .Cursor:focus
 {
+    background: white;
     outline: none;
 }

@@ -48,6 +48,11 @@ class App extends React.Component {
           threshold: 100,
         },
         {
+          name: "That's All Folks",
+          description: "No more upgrades. There are still much higher achievements, but the game hasn't been built to reach them.",
+          threshold: 250,
+        },
+        {
           name: "First code year",
           description:
             "The average programmer is said to write 10,000 lines of new code in a year. At this rate you'll be a superstar programmer in no time.",
@@ -124,7 +129,7 @@ class App extends React.Component {
           </pre>
         </div>
         <div>
-          <h1>NLoC: {this.state.nloc}</h1>
+          <h1>LoC: {this.state.nloc}</h1>
         </div>
         <Console onAddLOC={this.addLOC} typingRate={this.state.typingRate} />
         <div>
@@ -154,7 +159,7 @@ class App extends React.Component {
                 <div className="Achievement" key={i}>
                   <h3>{achievement.name}</h3>
                   <p>
-                    You made {achievement.threshold} lines of code (Loc).{" "}
+                    You made {achievement.threshold} lines of code (LoC).{" "}
                     {achievement.description}
                   </p>
                 </div>
