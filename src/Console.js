@@ -38,7 +38,7 @@ class Console extends React.Component {
   componentDidMount() {
     this.computeVisibleHistory();
 
-    fetch("/client.php.txt")
+    fetch("./client.php.txt")
       .then((response) => response.text())
       .then((text) => {
         this.setState({ text: text.split(/\r?\n/) });
