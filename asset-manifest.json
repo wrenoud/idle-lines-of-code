@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/idle-lines-of-code/static/css/main.9473f1e4.chunk.css",
+    "main.js": "/idle-lines-of-code/static/js/main.c59210a8.chunk.js",
+    "main.js.map": "/idle-lines-of-code/static/js/main.c59210a8.chunk.js.map",
+    "runtime-main.js": "/idle-lines-of-code/static/js/runtime-main.71430b99.js",
+    "runtime-main.js.map": "/idle-lines-of-code/static/js/runtime-main.71430b99.js.map",
+    "static/js/2.b31e9368.chunk.js": "/idle-lines-of-code/static/js/2.b31e9368.chunk.js",
+    "static/js/2.b31e9368.chunk.js.map": "/idle-lines-of-code/static/js/2.b31e9368.chunk.js.map",
+    "index.html": "/idle-lines-of-code/index.html",
+    "precache-manifest.91e7b4920c4b334f01161d387d698f84.js": "/idle-lines-of-code/precache-manifest.91e7b4920c4b334f01161d387d698f84.js",
+    "service-worker.js": "/idle-lines-of-code/service-worker.js",
+    "static/css/main.9473f1e4.chunk.css.map": "/idle-lines-of-code/static/css/main.9473f1e4.chunk.css.map",
+    "static/js/2.b31e9368.chunk.js.LICENSE.txt": "/idle-lines-of-code/static/js/2.b31e9368.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.71430b99.js",
+    "static/js/2.b31e9368.chunk.js",
+    "static/css/main.9473f1e4.chunk.css",
+    "static/js/main.c59210a8.chunk.js"
+  ]
+}
