@@ -86,16 +86,10 @@ class App extends React.Component {
       <div id="App">
         <div>
           <pre>
-            &nbsp;&nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;___
-            <br />
-            &nbsp;&nbsp;/&nbsp;&nbsp;_/__/&nbsp;/&nbsp;/__&nbsp;&nbsp;&nbsp;/&nbsp;_&nbsp;\_______&nbsp;&nbsp;___&nbsp;________&nbsp;___&nbsp;_&nbsp;&nbsp;__&nbsp;_&nbsp;&nbsp;___&nbsp;____
-            <br />
-            &nbsp;_/&nbsp;//&nbsp;_&nbsp;&nbsp;/&nbsp;/&nbsp;-_)&nbsp;/&nbsp;___/&nbsp;__/&nbsp;_&nbsp;\/&nbsp;_&nbsp;`/&nbsp;__/&nbsp;_&nbsp;`/&nbsp;&nbsp;'&nbsp;\/&nbsp;&nbsp;'&nbsp;\/&nbsp;-_)&nbsp;__/
-            <br />
-            /___/\_,_/_/\__/&nbsp;/_/&nbsp;&nbsp;/_/&nbsp;&nbsp;\___/\_,&nbsp;/_/&nbsp;&nbsp;\_,_/_/_/_/_/_/_/\__/_/
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/___/
-            <br />
+&nbsp;&nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;___&nbsp;&nbsp;_____&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__<br />
+&nbsp;&nbsp;/&nbsp;&nbsp;_/__/&nbsp;/&nbsp;/__&nbsp;&nbsp;&nbsp;/&nbsp;/&nbsp;&nbsp;(_)__&nbsp;&nbsp;___&nbsp;___&nbsp;&nbsp;&nbsp;___&nbsp;&nbsp;/&nbsp;_/&nbsp;/&nbsp;___/__&nbsp;&nbsp;___/&nbsp;/__<br />
+&nbsp;_/&nbsp;//&nbsp;_&nbsp;&nbsp;/&nbsp;/&nbsp;-_)&nbsp;/&nbsp;/__/&nbsp;/&nbsp;_&nbsp;\/&nbsp;-_|_-&lt;&nbsp;&nbsp;/&nbsp;_&nbsp;\/&nbsp;_/&nbsp;/&nbsp;/__/&nbsp;_&nbsp;\/&nbsp;_&nbsp;&nbsp;/&nbsp;-_)<br />
+/___/\_,_/_/\__/&nbsp;/____/_/_//_/\__/___/&nbsp;&nbsp;\___/_/&nbsp;&nbsp;&nbsp;\___/\___/\_,_/\__/<br />
           </pre>
         </div>
         <div>
