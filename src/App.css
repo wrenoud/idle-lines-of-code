@@ -1,5 +1,9 @@
-.App {
-  text-align: center;
+#App {
+  width: 100%;
+  margin: 0px auto;
+  font-family: monospace;
+  background-color: #0f0f23;
+  color: #009900;
 }
 
 .App-logo {
@@ -13,26 +17,38 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+.AchievementList{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.Achievement{
+  margin: 0px 0px 5px 0px;
+  padding: 0px 10px;
+  border-style: dashed;
+  animation-duration: 5s;
+  animation-name: reveal-down;
+}
+
+@keyframes appear {
   from {
-    transform: rotate(0deg);
+    opacity: 0.0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1.0;
+  }
+}
+
+@keyframes reveal-down {
+  from {
+    max-height: 0;
+    overflow: hidden;
+  }
+  to {
+    max-height: 1000px;
   }
 }
