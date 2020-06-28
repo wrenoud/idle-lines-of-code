@@ -60,24 +60,37 @@ class App extends React.Component {
           description:
             "You won't learn much, but at least you'll get some typing practice and a portfolio.",
           effect: "doubles your typing speed",
-          cost: 100,
+          cost: 500,
         },
         {
           name: "Discover stackoverflow.com",
           description: "Why write what you can copy.",
           effect: "doubles your typing speed",
-          cost: 100,
+          cost: 50,
         },
       ],
       typingRate: 1,
       nloc: 0,
       lifetime_nloc: 0,
     };
+
     this.addLOC = this.addLOC.bind(this);
   }
 
   addLOC(loc) {
     this.setState({ nloc: this.state.nloc + loc });
+  }
+
+  handleUpgrade(upgrade_name) {
+    const upgrade = this.state.upgrades.find(
+      (upgrade) => upgrade.name === upgrade_name
+    );
+    this.setState({
+      typingRate: this.state.typingRate * 2,
+      upgrades: this.state.upgrades.filter(
+        (upgrade) => upgrade.name !== upgrade_name
+      ),
+    });
   }
 
   render() {
@@ -97,6 +110,21 @@ class App extends React.Component {
         <Console onAddLOC={this.addLOC} typingRate={this.state.typingRate} />
         <div>
           <h1>Upgrades</h1>
+          <div className="UpgradeList">
+            {this.state.upgrades
+              .filter((upgrade) => upgrade.cost < this.state.nloc)
+              .map((upgrade, i) => (
+                <div className="Upgrade" key={i} onClick={this.handleUpgrade.bind(this, upgrade.name)}>
+                  <h3>
+                    {upgrade.name} (Cost: {upgrade.cost} LoC)
+                  </h3>
+                  <p>{upgrade.description}</p>
+                  <p>
+                    <i>Effect: {upgrade.effect}</i>
+                  </p>
+                </div>
+              ))}
+          </div>
         </div>
         <div className="Achievements">
           <h1>Achievements</h1>

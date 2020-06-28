@@ -26,12 +26,20 @@
   flex-direction: column-reverse;
 }
 
-.Achievement{
+.Upgrade, .Achievement{
   margin: 0px 0px 5px 0px;
   padding: 0px 10px;
   border-style: dashed;
   animation-duration: 5s;
   animation-name: reveal-down;
+}
+
+.Upgrade{
+  cursor: pointer;
+}
+
+.Upgrade:hover{
+  background: #003300;
 }
 
 @keyframes appear {
