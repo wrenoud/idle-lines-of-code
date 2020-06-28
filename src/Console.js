@@ -138,6 +138,7 @@ class Console extends React.Component {
               ref={this.promptRef}
               className="Cursor"
               onChange={this.handleChange}
+              placeholder="activate console to type"
               value=""
             />
           </div>

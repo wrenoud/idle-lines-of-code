@@ -17,15 +17,23 @@
 
 .Console .Prompt .Cursor
 {
-    background: transparent;
-    width: 10px;
     padding: 0px;
     margin: 0px;
     border: none;
 }
+.Console .Prompt .Cursor{
+    background: transparent;
+}
 
-.Console .Prompt .Cursor:focus
-{
+.Console .Prompt .Cursor:focus{
+    width: 10px;
     background: white;
     outline: none;
+}
+
+.Console .Prompt .Cursor::placeholder{
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 10px;
+    color: white;
 }
