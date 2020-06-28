@@ -12,8 +12,7 @@ class App extends React.Component {
           name: "A Good Days Work",
           description: 
             <>
-              You made 10 lines of code (LoC). In the 1975 software project
-              management book,{" "}
+              In the 1975 software project management book,{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -32,7 +31,7 @@ class App extends React.Component {
           name: "A Better Days Work",
           description: (
             <>
-              You made 100 lines of code (LoC). In the Codding Horror blog post{" "}
+              In the Codding Horror blog post{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -51,7 +50,7 @@ class App extends React.Component {
         {
           name: "First code year",
           description:
-            "You made 40 lines of code. The average programmer is said to write 10,000 lines of new code in a year. At this rate you'll be a superstar programmer in no time.",
+            "The average programmer is said to write 10,000 lines of new code in a year. At this rate you'll be a superstar programmer in no time.",
           threshold: 10000,
         },
       ],
@@ -107,7 +106,7 @@ class App extends React.Component {
               .map((achievement, i) => (
                 <div className="Achievement" key={i}>
                   <h3>{achievement.name}</h3>
-                  <p>{achievement.description}</p>
+                  <p>You made {achievement.threshold} lines of code (Loc). {achievement.description}</p>
                 </div>
               ))}
           </div>
