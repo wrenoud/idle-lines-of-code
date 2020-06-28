@@ -70,7 +70,7 @@ class App extends React.Component {
           description:
             "You won't learn much, but at least you'll get some typing practice and a portfolio.",
           effect: "doubles your typing speed",
-          cost: 500,
+          cost: 200,
         },
         {
           name: "Discover stackoverflow.com",
@@ -88,15 +88,20 @@ class App extends React.Component {
   }
 
   addLOC(loc) {
-    this.setState({ nloc: this.state.nloc + loc });
+    this.setState({ nloc: this.state.nloc + loc, lifetime_nloc: this.state.lifetime_nloc + loc });
   }
 
   handleUpgrade(upgrade_name) {
     const upgrade = this.state.upgrades.find(
       (upgrade) => upgrade.name === upgrade_name
     );
+
+    if(upgrade.cost > this.state.nloc)
+      return;
+
     this.setState({
       typingRate: this.state.typingRate * 2,
+      nloc: this.state.nloc - upgrade.cost,
       upgrades: this.state.upgrades.filter(
         (upgrade) => upgrade.name !== upgrade_name
       ),
@@ -126,9 +131,9 @@ class App extends React.Component {
           <h1>Upgrades</h1>
           <div className="UpgradeList">
             {this.state.upgrades
-              .filter((upgrade) => upgrade.cost < this.state.nloc)
+              .filter((upgrade) => upgrade.cost * 0.8 < this.state.nloc)
               .map((upgrade, i) => (
-                <div className="Upgrade" key={i} onClick={this.handleUpgrade.bind(this, upgrade.name)}>
+                <div className={`Upgrade ${upgrade.cost <= this.state.nloc ? "Purchasable" : ""}`} key={i} onClick={this.handleUpgrade.bind(this, upgrade.name)}>
                   <h3>
                     {upgrade.name} (Cost: {upgrade.cost} LoC)
                   </h3>
@@ -144,7 +149,7 @@ class App extends React.Component {
           <h1>Achievements</h1>
           <div className="AchievementList">
             {this.state.achievements
-              .filter((achievement) => achievement.threshold < this.state.nloc)
+              .filter((achievement) => achievement.threshold < this.state.lifetime_nloc)
               .map((achievement, i) => (
                 <div className="Achievement" key={i}>
                   <h3>{achievement.name}</h3>

@@ -35,6 +35,9 @@
 }
 
 .Upgrade{
+  cursor: not-allowed;
+}
+.Upgrade.Purchasable{
   cursor: pointer;
 }
 
