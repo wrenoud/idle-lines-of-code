@@ -10,7 +10,7 @@ class App extends React.Component {
       achievements: [
         {
           name: "A Good Days Work",
-          description: 
+          description: (
             <>
               In the 1975 software project management book,{" "}
               <a
@@ -24,7 +24,7 @@ class App extends React.Component {
               chosen, a professional developer will write an average 10 lines of
               code (LoC) per day.
             </>
-          ,
+          ),
           threshold: 10,
         },
         {
@@ -51,6 +51,16 @@ class App extends React.Component {
           name: "First code year",
           description:
             "The average programmer is said to write 10,000 lines of new code in a year. At this rate you'll be a superstar programmer in no time.",
+          threshold: 10000,
+        },
+        {
+          name: "One Game Neverending",
+          description: (
+            <>
+              That's enough code for one{" "}
+              <a href="https://gnespy.com/museum/">GNE</a>
+            </>
+          ),
           threshold: 10000,
         },
       ],
@@ -98,10 +108,14 @@ class App extends React.Component {
       <div id="App">
         <div>
           <pre>
-&nbsp;&nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;___&nbsp;&nbsp;_____&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__<br />
-&nbsp;&nbsp;/&nbsp;&nbsp;_/__/&nbsp;/&nbsp;/__&nbsp;&nbsp;&nbsp;/&nbsp;/&nbsp;&nbsp;(_)__&nbsp;&nbsp;___&nbsp;___&nbsp;&nbsp;&nbsp;___&nbsp;&nbsp;/&nbsp;_/&nbsp;/&nbsp;___/__&nbsp;&nbsp;___/&nbsp;/__<br />
-&nbsp;_/&nbsp;//&nbsp;_&nbsp;&nbsp;/&nbsp;/&nbsp;-_)&nbsp;/&nbsp;/__/&nbsp;/&nbsp;_&nbsp;\/&nbsp;-_|_-&lt;&nbsp;&nbsp;/&nbsp;_&nbsp;\/&nbsp;_/&nbsp;/&nbsp;/__/&nbsp;_&nbsp;\/&nbsp;_&nbsp;&nbsp;/&nbsp;-_)<br />
-/___/\_,_/_/\__/&nbsp;/____/_/_//_/\__/___/&nbsp;&nbsp;\___/_/&nbsp;&nbsp;&nbsp;\___/\___/\_,_/\__/<br />
+            &nbsp;&nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;____&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;___&nbsp;&nbsp;_____&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__
+            <br />
+            &nbsp;&nbsp;/&nbsp;&nbsp;_/__/&nbsp;/&nbsp;/__&nbsp;&nbsp;&nbsp;/&nbsp;/&nbsp;&nbsp;(_)__&nbsp;&nbsp;___&nbsp;___&nbsp;&nbsp;&nbsp;___&nbsp;&nbsp;/&nbsp;_/&nbsp;/&nbsp;___/__&nbsp;&nbsp;___/&nbsp;/__
+            <br />
+            &nbsp;_/&nbsp;//&nbsp;_&nbsp;&nbsp;/&nbsp;/&nbsp;-_)&nbsp;/&nbsp;/__/&nbsp;/&nbsp;_&nbsp;\/&nbsp;-_|_-&lt;&nbsp;&nbsp;/&nbsp;_&nbsp;\/&nbsp;_/&nbsp;/&nbsp;/__/&nbsp;_&nbsp;\/&nbsp;_&nbsp;&nbsp;/&nbsp;-_)
+            <br />
+            /___/\_,_/_/\__/&nbsp;/____/_/_//_/\__/___/&nbsp;&nbsp;\___/_/&nbsp;&nbsp;&nbsp;\___/\___/\_,_/\__/
+            <br />
           </pre>
         </div>
         <div>
@@ -134,7 +148,10 @@ class App extends React.Component {
               .map((achievement, i) => (
                 <div className="Achievement" key={i}>
                   <h3>{achievement.name}</h3>
-                  <p>You made {achievement.threshold} lines of code (Loc). {achievement.description}</p>
+                  <p>
+                    You made {achievement.threshold} lines of code (Loc).{" "}
+                    {achievement.description}
+                  </p>
                 </div>
               ))}
           </div>
